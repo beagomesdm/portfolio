@@ -1,0 +1,592 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background: #f5efdf;
+  color: #111;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 6%;
+}
+
+.logo {
+  font-family: "Roboto";
+  font-size: 20px;
+  /* font-weight: bold; */
+}
+
+.logo span {
+  color: #7d0505;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+nav a {
+  font-size: 14px;
+  color: beige;
+}
+
+button {
+  background: #39723d;
+  border: none;
+  padding: 7px 7px;
+  border-radius: 30px;
+}
+
+button a {
+  text-decoration: none;
+}
+
+button:hover {
+  background: #0b3006;
+  transition: 0.3s;
+}
+
+.hero {
+  height: 700px;
+  background: #294c36;
+
+  position: relative;
+  overflow: hidden;
+
+  color: rgba(255, 255, 255, 0.762);
+}
+
+.big-title {
+  font-family: "Bodoni Moda";
+
+  font-size: 120px;
+
+  font-weight: 900;
+
+  position: absolute;
+
+  top: 40px;
+  left: 20%;
+
+  z-index: 2;
+}
+
+.outline {
+  position: absolute;
+
+  right: 15%;
+
+  top: 150px;
+
+  font-family: "Bodoni Moda";
+
+  font-size: 100px;
+
+  line-height: 0.8;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1px #d6a80b;
+}
+
+.photo-box {
+  position: absolute;
+
+  width: 350px;
+
+  height: 400px;
+
+  left: 12%;
+
+  top: 120px;
+
+  background: #966842;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0.8;
+}
+
+.social {
+  position: absolute;
+
+  color: #fff7e1d9;
+
+  right: 18%;
+
+  top: 260px;
+
+  font-size: 16x;
+}
+
+.intro img {
+  max-width: 300px;
+  position: absolute;
+  bottom: 100px;
+}
+/* .intro {
+  position: absolute;
+
+  bottom: 80px;
+
+  left: 30px;
+
+  font-size: 14px;
+} */
+
+.about {
+  display: flex;
+
+  justify-content: space-around;
+
+  padding: 100px 8%;
+}
+
+.hello {
+  width: 45%;
+}
+
+.hello h1 {
+  font-family: "Monospace";
+  color: #111111e5;
+  font-size: 70px;
+}
+
+.hello p {
+  margin-top: 30px;
+}
+
+.button {
+  color: #000000d1;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.button-projects span {
+  color: #132f0c;
+}
+
+/* .button-projects {
+  margin-top: 40px;
+
+  background: #391d15;
+
+  text-align: center;
+
+  padding: 15px;
+
+  border-radius: 15px;
+
+  color: white;
+
+  width: 300px;
+}
+
+.button-projects a {
+  text-decoration: none;
+  color: white;
+}
+
+.button-projects:hover {
+  color: #7d0505;
+  transition: 3s;
+} */
+
+/* .profile-card {
+  width: 330px;
+
+  border-radius: 10px;
+
+  background: #2a4c36cb;
+
+  color: white;
+} */
+
+/* .profile-card img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+
+  object-fit: cover;
+} */
+
+/* .tags span {
+  background: #fec249;
+
+  color: rgb(0, 0, 0);
+
+  padding: 10px 15px;
+
+  border-radius: 15px;
+
+  display: inline-block;
+
+  margin: 10px;
+} */
+
+/* .contact {
+  padding: 25px;
+  color: #e1ddda;
+  font-family: monospace;
+  font-size: large;
+} */
+
+/* Estrutura Principal da Janela */
+.projects-window {
+  background-color: #1c2d24; /* O tom verde escuro que está no teu rodapé/card */
+  border: 2px solid #1c2d24;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px #e6dfd3; /* Sombra sólida clara para destacar do fundo */
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px; /* Mantém um tamanho aproximado ao do card antigo */
+}
+
+/* Barra de Topo */
+.window-header {
+  background-color: #e6dfd3; /* Fundo claro para contrastar */
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #1c2d24;
+}
+
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #1a211d;
+  /* background-color: transparent;        */
+  background-color: #7d0505;
+}
+
+.window-title {
+  margin: 0 auto 0 12px;
+  font-family: monospace;
+  font-size: 13px;
+  color: #1c2d24;
+  font-weight: bold;
+}
+
+/* Área Interna onde ficam as pastas */
+.window-body {
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  background-color: #243b2f; /* Um tom ligeiramente mais claro para o interior da janela */
+}
+
+/* Item da Pasta (Link) */
+.folder-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  width: 80px;
+  transition: transform 0.1s ease;
+}
+
+.folder-item:hover {
+  transform: scale(1.05); /* Pequeno efeito ao passar o rato */
+}
+
+/* O Ícone Desenhado */
+.folder-icon {
+  width: 85px;
+  height: 85px;
+  margin-bottom: 8px;
+}
+
+/* Texto abaixo da pasta */
+.folder-name {
+  color: #e6dfd3;
+  font-size: 12px;
+  font-family: monospace;
+  text-align: center;
+  word-break: break-word;
+}
+
+.resume {
+  background: #294c36;
+
+  color: white;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  padding: 70px 8%;
+
+  gap: 60px;
+}
+
+h2 {
+  font-family: "Bodoni Moda";
+
+  font-size: 40px;
+
+  margin-bottom: 30px;
+}
+
+.item {
+  margin-bottom: 30px;
+}
+
+.item b {
+  color: #ffb51a;
+}
+
+.experience {
+  background: #ffb51a;
+
+  color: #111;
+
+  padding: 30px;
+
+  margin-top: 40px;
+}
+
+.apps {
+  display: flex;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.apps,
+.chips span {
+  background: white;
+
+  color: #111;
+
+  padding: 10px;
+
+  border-radius: 8px;
+}
+
+.chips {
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin: 30px 0;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    height: 520px; /* Altura ideal para conter todos os elementos */
+  }
+
+  /* Centraliza e reduz o título preenchido para não cortar */
+  .big-title {
+    font-size: 52px;
+    left: 5%;
+    top: 20px;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* Reduz e posiciona os títulos com contorno na base */
+  .outline {
+    font-size: 42px;
+    right: auto;
+    left: 5%;
+    top: 360px;
+    width: 90%;
+    text-align: center;
+    line-height: 0.9;
+  }
+
+  /* Ajusta o tamanho da foto de perfil para telas pequenas */
+  .photo-box {
+    width: 200px;
+    height: 230px;
+    left: calc(50% - 100px); /* Centraliza na tela */
+    top: 100px;
+  }
+
+  /* CORREÇÃO DO IG: Traz o texto para cima, logo abaixo da foto */
+  .social {
+    right: auto;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    top: 350px; /* Posição perfeita logo abaixo do bloco da foto */
+    font-size: 14px;
+    z-index: 4;
+  }
+
+  /* Ajusta o Gatinho para ficar menor e colado no ombro da foto */
+  .intro img {
+    max-width: 55px;
+    position: absolute;
+    bottom: auto;
+    top: 80px;
+    right: calc(50% - 115px);
+    left: auto;
+    z-index: 5;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .hello {
+    width: 100%;
+  }
+
+  .resume {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Container Geral do Rodapé */
+/* Container Principal do Rodapé */
+.site-footer {
+  background-color: #1c2d24; /* O teu verde escuro original */
+  color: #e6dfd3; /* O teu bege claro para os textos */
+  padding: 80px 40px 30px 40px;
+  font-family: sans-serif;
+}
+
+.footer-item span {
+  color: #d6a80b;
+}
+
+/* Alinhamento das 3 Colunas de forma fluida */
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Cada Coluna Individual */
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col span {
+  color: #d6a80b;
+}
+
+/* Títulos das colunas (Estilo minimalista com linha fina abaixo) */
+.footer-title {
+  font-family: serif; /* Mantém o toque elegante das tuas fontes */
+  font-size: 20px;
+  margin: 0 0 24px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(230, 223, 211, 0.2); /* Linha bege bem sutil */
+  letter-spacing: 0.5px;
+}
+
+/* Itens de texto */
+.footer-date {
+  font-family: monospace;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.footer-sub {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 4px 0 0 0;
+}
+
+/* Categorias de Skills */
+.skills-section {
+  margin-bottom: 16px;
+}
+
+.skills-label {
+  font-family: monospace;
+  font-size: 13px;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+/* Alinhamento das tags sem caixas pesadas */
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Pílulas de Skills: Apenas texto com uma borda fininha e elegante */
+.skill-pill {
+  font-size: 13px;
+  padding: 4px 10px;
+  border: 1px solid rgba(230, 223, 211, 0.4);
+  border-radius: 4px;
+  font-family: monospace;
+  background: transparent;
+}
+
+/* Lista de Interesses */
+.interests-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.interests-list li {
+  font-size: 15px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+/* Créditos finais bem discretos no fundo */
+.footer-credits {
+  max-width: 1100px;
+  margin: 60px auto 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(230, 223, 211, 0.1);
+  text-align: center;
+}
+
+.footer-credits p {
+  font-size: 12px;
+  opacity: 0.4;
+  margin: 0;
+  font-family: monospace;
+}
+
+/* Ajuste para ecrãs pequenos (Telemóvel) */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 40px 20px 20px 20px;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 35px;
+  }
+}

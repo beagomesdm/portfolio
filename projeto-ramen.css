@@ -1,0 +1,349 @@
+body {
+  background-color: #2b4235;
+}
+/* Margem e espaçamento da secção inteira */
+.ramen-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth; /* Faz o deslizar da pasta ser suave */
+}
+
+/* A estrutura da janela imitando o portfólio */
+.ramen-window {
+  background-color: #e6dfd3; /* Bege claro do fundo do teu site */
+  border: 2px solid #1c2d24; /* Contorno verde escuro */
+  border-radius: 12px;
+  box-shadow: 6px 6px 0px #1c2d24; /* Sombra sólida Brutalista */
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+/* Topo da janela do projeto */
+.ramen-header {
+  background-color: #1c2d24; /* Inverte as cores: topo escuro */
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.ramen-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.r-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #e6dfd3;
+  opacity: 0.5;
+}
+
+.ramen-title {
+  margin: 0 auto 0 14px;
+  font-family: monospace;
+  font-size: 13px;
+  color: #e6dfd3;
+}
+
+/* Corpo da Janela (Layout em duas colunas) */
+.ramen-body {
+  display: flex;
+  flex-wrap: wrap; /* Ajusta-se caso o ecrã seja pequeno */
+  background-color: #f7f5f0; /* Um bege ligeiramente mais suave para a área interna */
+}
+
+/* Lado da Imagem */
+.ramen-preview {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e2ded5; /* Destaque sutil para a imagem */
+  border-right: 2px solid #1c2d24;
+}
+
+.ramen-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 2px solid #1c2d24;
+  box-shadow: 4px 4px 0px #1c2d24;
+}
+
+/* Lado dos Textos */
+.ramen-info {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tag-categoria {
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: bold;
+  color: #e6dfd3;
+  background-color: #1c2d24;
+  padding: 4px 8px;
+  border-radius: 4px;
+  width: fit-content;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.ramen-info h2 {
+  font-size: 36px;
+  color: #1c2d24;
+  margin: 0 0 16px 0;
+}
+
+.ramen-description {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #2b4235;
+  margin-bottom: 16px;
+}
+
+/* Pequena tabela de detalhes técnica */
+.ramen-specs {
+  border-top: 1px dashed #1c2d24;
+  border-bottom: 1px dashed #1c2d24;
+  padding: 16px 0;
+  margin-bottom: 30px;
+}
+
+.spec-item {
+  font-size: 14px;
+  color: #1c2d24;
+  margin-bottom: 6px;
+}
+.spec-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Botão de Ação */
+.ramen-btn {
+  background-color: #1c2d24;
+  color: #e6dfd3;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  border: 2px solid #1c2d24;
+  transition: all 0.15s ease;
+}
+
+.ramen-btn:hover {
+  background-color: #e6dfd3;
+  color: #1c2d24;
+  box-shadow: 4px 4px 0px #1c2d24;
+  transform: translate(-2px, -2px);
+}
+
+/* Responsividade para ecrãs de telemóvel */
+@media (max-width: 768px) {
+  .ramen-preview {
+    border-right: none;
+    border-bottom: 2px solid #1c2d24;
+  }
+  .ramen-info {
+    padding: 24px;
+  }
+}
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0f1913; /* O mesmo verde escuro do teu estilo */
+  color: #e6dfd3; /* O bege claro para o texto/ícone */
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 2px solid #1c2d24;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 4px 4px 0px #e6dfd3; /* Sombra sólida clara para destacar do fundo escuro */
+  z-index: 9999; /* Garante que fica sempre por cima de tudo */
+  transition: all 0.15s ease;
+}
+
+/* Efeito ao passar o rato (Hover) */
+.back-to-top:hover {
+  background-color: #e6dfd3;
+  color: #1c2d24;
+  box-shadow: 4px 4px 0px #1c2d24;
+  transform: translate(-2px, -2px);
+}
+
+/* Ajuste para ecrãs mais pequenos (Telemóvel) */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+  }
+  .back-to-top span {
+    display: none; /* Esconde a palavra "Home" no telemóvel para ficar só o ícone da seta */
+  }
+}
+
+@media (max-width: 800px) {
+  /* 1. Ajusta a altura da secção verde nos projetos */
+  .hero {
+    height: 520px;
+  }
+
+  /* 2. Centraliza o título principal do projeto */
+  .big-title {
+    font-size: 52px;
+    left: 5%;
+    top: 20px;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* 3. Posiciona os títulos com contorno ao fundo */
+  .outline {
+    font-size: 42px;
+    right: auto;
+    left: 5%;
+    top: 360px;
+    width: 90%;
+    text-align: center;
+    line-height: 0.9;
+  }
+
+  /* 4. Centraliza a caixa da imagem principal do projeto */
+  .photo-box {
+    width: 200px;
+    height: 230px;
+    left: calc(50% - 100px);
+    top: 100px;
+  }
+
+  /* 5. Mantém o teu Instagram visível abaixo da foto */
+  .social {
+    right: auto;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    top: 340px;
+    font-size: 14px;
+    z-index: 4;
+  }
+
+  /* 6. Mantém o gatinho no mesmo lugar fixo do ombro da imagem */
+  .intro img {
+    max-width: 55px;
+    position: absolute;
+    bottom: auto;
+    top: 80px;
+    right: calc(50% - 115px);
+    left: auto;
+    z-index: 5;
+  }
+
+  /* ==========================================================================
+     BÓNUS PARA OS PROJETOS: Ajuste das janelas e do conteúdo de baixo
+     ========================================================================== */
+  .about {
+    flex-direction: column;
+    padding: 40px 5%; /* Dá uma folga nas laterais para o telemóvel */
+    gap: 30px;
+  }
+
+  /* Garante que as janelas de texto ou detalhes do projeto ocupam a largura total */
+  .hello,
+  .projects-window {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* ==========================================================================
+   DESIGN RESPONSIVO ALINHADO PARA OS PROJETOS
+   ========================================================================== */
+@media (max-width: 800px) {
+  /* 1. Remove qualquer margem fixa do body no mobile para não empurrar a janela */
+  body {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 2. Centraliza a secção verde e dá um espaçamento confortável nas bordas */
+  .ramen-section,
+  .ramen-section #projeto-ramen {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 40px 16px !important; /* Margem igual na esquerda e direita */
+    min-height: 100vh !important;
+  }
+
+  /* 3. Ajusta a Janela para ocupar o centro perfeito do ecrã */
+  .ramen-window {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important; /* Força o alinhamento central absoluto */
+    border-radius: 8px !important;
+  }
+
+  /* 4. Faz o conteúdo interno empilhar na vertical de forma limpa */
+  .ramen-body {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+  }
+
+  /* 5. Ajusta o bloco da imagem (Preview) */
+  .ramen-preview {
+    width: 100% !important;
+    padding: 16px !important;
+    display: flex !important;
+    justify-content: center !important;
+    border-right: none !important;
+    border-bottom: 2px solid #1c2d24 !important; /* A linha passa a dividir em formato horizontal */
+  }
+
+  .ramen-preview img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  /* 6. Corrige o alinhamento dos textos */
+  .ramen-info {
+    width: 100% !important;
+    padding: 24px 16px !important; /* Alinhamento simétrico para o texto não parecer torto */
+    box-sizing: border-box !important;
+  }
+
+  .ramen-info h2 {
+    font-size: 26px !important;
+    margin: 10px 0 !important;
+  }
+
+  .ramen-description {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    text-align: left !important; /* Mantém o bloco de leitura natural à esquerda, mas centralizado na caixa */
+  }
+}
